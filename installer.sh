@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-REPO="https://github.com/TeamUltroid/Ultroid.git"
-DIR="/root/TeamUltroid"
+REPO="https://github.com/Ling-ex/HyperUltroid.git"
+DIR="/root/Ling-ex"
 
 spinner(){
     local pid=$!
@@ -36,7 +36,7 @@ clone_repo(){
             fi
             return
     fi
-    echo -e "Cloning Ultroid ${BRANCH}... "
+    echo -e "Cloning HyperUltroid ${BRANCH}... "
     git clone -b $BRANCH $REPO $DIR
 }
 
@@ -68,7 +68,7 @@ misc_install(){
                     git pull
             else
                 echo -e "Cloning VCBOT.."
-                git clone https://github.com/TeamUltroid/VcBot $DIR/vcbot
+                git clone https://github.com/Ling-ex/VcBot $DIR/vcbot
             fi
             pip3 install pytgcalls>=3.0.0.dev21 && pip3 install av -q --no-binary av
     fi
